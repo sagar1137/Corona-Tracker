@@ -38,7 +38,7 @@ public class Coronadata {
 		
 		HttpResponse<String> httpResponse=client.send(request, HttpResponse.BodyHandlers.ofString());
 		
-		System.out.println("hey");
+		//System.out.println("hey");
 		StringReader in = new StringReader(httpResponse.body());
 		Iterable<CSVRecord> records = CSVFormat.DEFAULT.withFirstRecordAsHeader().parse(in);
 		for (CSVRecord record : records) {
